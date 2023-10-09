@@ -5,20 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="index.css">
+    <meta name="title" content="Weather App">
+<meta name="description" content="Created using HTML/CSS/JS/AJAX API calls">
+<meta name="keywords" content="HTML,CSS,JS,AJAX API calls,Unsplash API, Open weather Api">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+
 </head>
 <body>
     <div class="container">
-        <div class="card">
+        <div id="weather" class="card">
             <div class="search_group">
-                <input />
-                <button>Search</button>
+                <input id="location" placeholder="Enter a city" type="text"/>
+                <button onclick="getCurrentWeather()">Search</button>
             </div>
             <div class="result">
-                <img src="sun.png"/>
-                <h2>30</h2>
+                <img id="weatherType"/>
+                <h2 id="temprature"></h2>
+                <h1 id="city"></h1>
+                <div>
+                    <img id="Hicon" src="images/humidity.png" width="50" height="50" style="object-fit: contain; display: none"/>
+                    <p id="humidity"></p>
+                </div>
+                
             </div>
 
         </div>
+        <div id="Control" class="card">
+            <div class="search_group">
+                <input id="OpenWeather" placeholder="Enter OpenWeather Api Key" type="text"/>
+            </div>
+            <div class="search_group">
+                <input id="Unsplash" placeholder="Enter Unsplash Api Key" type="text"/>
+                <button onclick="SubmitCred()">Submit</button>
+            </div>
+        </div>
+
+
     </div>
 </body>
+
+<script src="index.js"></script>
+
 </html>
