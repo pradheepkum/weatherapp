@@ -34,10 +34,14 @@
 .search_group{
     width: 100%;
     margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .search_group input{
     padding: 2px;
-    width: 85%;
+    width: 100%;
     background-color: lightgray;
     color: black;
 }
@@ -64,3 +68,13 @@
     display: none;
 }
 
+@media only screen and (max-width: 990px){
+    .card {
+        min-width: 80%;
+    }
+    .search_group input{
+
+        width: 80%;
+        
+    }
+}
